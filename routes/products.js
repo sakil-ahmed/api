@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
 
 const products = [
   {
@@ -55,5 +56,6 @@ const products = [
 router.get("/products", (req, res) => {
   res.send(products);
 });
+// post
 
 module.exports = router;
