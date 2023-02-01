@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form__container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 30px;
+            width: 400px;
+            background: linear-gradient(167.44deg, #08244F 0%, #134CB5 47.38%, #0B42AB 100%);
+            border-radius: 12px;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            background: transparent;
+            min-height: 60px;
+            padding: 0 15px;
+            background-color: rgba(110, 121, 136, 0.3);
+            border-radius: 7px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #5B6766;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background-color: #00574E;
+            padding: 15px;
+            border-radius: 7px;
+            color: #fff;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+    </script>
+
+    <div class="form__container">
+        <form method="post" action="http://localhost:3000/products" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="title">
+            <input type="text" name="description" placeholder="description">
+            <input type="text" name="price" placeholder="price">
+            <input type="text" name="categories" placeholder="categories">
+            <input type="file" name="image">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -36,7 +36,5 @@ readdirSync("./routes").map((file) =>
 
 // routes
 app.get("/", (req, res) => {
-  res.send("This is Home Page");
+  res.sendFile(__dirname + "/index.html");
 });
-
-//how to fix this error MongoServerError: user is not allowed to do action [find] on [test.newusers] using express js?
