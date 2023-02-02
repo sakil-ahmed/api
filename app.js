@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const { readdirSync } = require("fs");
 const mongoose = require("mongoose");
 const { urlencoded } = require("express");
+const ServerlessHttp = require("serverless-http");
 
 // port
 const PORT = process.env.PORT || 3000;
@@ -38,3 +39,5 @@ readdirSync("./routes").map((file) =>
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
+
+module.exports = ServerlessHttp(app);
